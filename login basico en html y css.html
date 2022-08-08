@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Iniciar sesion</title>
+	<style>
+		/*importamos un font de google api*/
+@import url('https://fonts.googleapis.com/css2? family= Roboto & display=swap');
+/*le damos estilo al html*/
+html{
+	font-family:  'Roboto', sans-serif;
+}
+/*creamos una clase que le de un colo al body*/
+.thema-blue{
+	background: #212f3d;
+	color: #fff;
+}
+/*cremaos clase para dar fromatos a un fromaulario */
+.formulario{
+	border-radius: 5px;
+  	padding: 20px;
+}
+.celdas{
+	width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.btnform{
+   width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btnfrom:hover {
+  background-color: #45a049;
+}
+/*creamos calses para centrar objetos */
+.centar-pantalla{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.centrar{
+	display: flex;
+	justify-content: center;
+	align-items:center ;
+}
+/*------------- animaciones ------------------------*/
+/*creamos una clase para que nuestro anuncio parpade*/
+.parpadea {
+  
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-name:parpadeo;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@-moz-keyframes parpadeo{  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes parpadeo {  
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+   100% { opacity: 1.0; }
+}
+
+@keyframes parpadeo {  
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+	</style>
+</head>
+<!-- le damos un fondo al la pagina en este caso el tema azul -->
+<body class="thema-blue">
+
+	<!-- abrimos un div lo centramos al medio de la pantalla -->
+	<div class="centar-pantalla">
+
+		<!-- abrimos un fromulario -->
+		<form method="" action="" class="formulario">
+			
+			<input type="text" name="mail" placeholder="Usuario" class="celdas">
+			<input type="password" name="pass" placeholder="Contrseña" class="celdas">
+			<button class="btnform">Iniciar Sesion</button>
+
+		</form>
+		<label class="parpadea centrar"><?php include("php/status.php"); ?></label>
+	</div>
+
+</body>
+</html>
+
+<!-- uthor systemhz -->
